@@ -1,9 +1,13 @@
+// ******************* data types *******************
+
+
 // primitive data types:
 
 // 7 types: string, number, boolean, null, undefined, symbol, bigint
 
 const marks = 80
 const marksrev = 82.5
+let name = "souvik" //string
 
 const isLoggedIn = false
 const outsideTemp = null
@@ -39,4 +43,34 @@ const myFunction = function(){
 
 
 
+// *******************************  Memory ********************************************
+
+// types of memory: stack: (used in primitive data types) - jo bhi variable declare karte hai uska humko ek copy milta hai  
+
+// and heap: (used in non primitive data types)- aur jab bhi hum kuch reference type ka data create karte hai to uska reference heap me store hota hai aur original data milta hai 
+
+
+// stack example:
+
+let myName = "souvik"
+
+let anotherName = myName
+anotherName = "das"
+
+console.log(myName) 
+console.log(anotherName) // jab maine anothername ki value change ki to myName ki value change nahi hui kyuki anotherName ne copy uthai aur jab changes hue toh sirf copy hi change hui 
+
+// heap example:
+
+let userOne ={
+    name: "souvik",
+    age: 21
+}
+
+let userTwo = userOne
+
+userTwo.age = 22
+
+console.log(userOne.age)
+console.log(userTwo.age)// values change hui hai kyuki userTwo ne userOne ka reference liya hua hai aur heap memory mai original data hi store hota hai
 
