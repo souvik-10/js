@@ -14,7 +14,7 @@ const outsideTemp = null
 let userEmail 
 
 const id =Symbol('158')
-const anotherId = Symbol('158')
+const anotherId = Symbol('158') // symbol is unique 
 
 console.log(id === anotherId)
 
